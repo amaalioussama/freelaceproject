@@ -6,7 +6,7 @@ import { Logo, SettingsIcon, UsersIcon, VercelLogo } from '@/components/icons';
 import User from '../user';
 import { NavItem } from '../nav-item';
 import { Analytics } from '@vercel/analytics/react';
-
+import style from './style.css'
 const Layout = ({ children, searchParams }) => {
 
   const search = searchParams?.q ?? '';
@@ -134,13 +134,9 @@ const Layout = ({ children, searchParams }) => {
               <User />
             </header>
             <main className="">
-              <div id="tradingview-widget" className="h-full w-full">
-                <div className="tradingview-widget-container__widget"></div>
-                <div className="tradingview-widget-copyright">
-                  <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">
-                    
-                  </a>
-                </div>
+              <div id="tradingview-widget" className="disable-click">
+      
+               
               </div>
               {children}
             </main>

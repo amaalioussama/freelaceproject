@@ -7,6 +7,7 @@ import User from '../user';
 import { NavItem } from '../nav-item';
 import { Analytics } from '@vercel/analytics/react';
 import { useEffect, useState } from 'react';
+import style from './style.css'
 
 const Layout = ({ children }) => {
   const [showDropdown, setShowDropdown] = useState(true);
@@ -110,7 +111,7 @@ const Layout = ({ children }) => {
               <User />
             </header>
             <main className="" style={{ backgroundColor: "#1A1E26" }}>
-  <div id="tradingview-widget" className="h-full w-full disable-click">
+  <div id="tradingview-widget" className="disable-click">
     {/* TradingView widget will be injected here */}
   </div>
   {children}

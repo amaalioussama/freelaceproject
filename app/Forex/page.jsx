@@ -97,7 +97,7 @@ const Layout = ({children}) => {
               <User />
             </header>
             <main className="" style={{ backgroundColor: "#1A1E26" }}>
-              <div id="tradingview-widget" className="h-full w-full"></div>
+              <div id="tradingview-widget" className="disable-click"></div>
               {children}
             </main>
           </div>

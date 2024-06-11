@@ -107,7 +107,7 @@ const Layout =  ({ children = undefined }) => {
               <User />
             </header>
             <main className="flex-1 h-full">
-              <div id="tradingview-widget" className="h-full w-full">
+              <div id="tradingview-widget" className="h-full w-full disable-click">
                 {/* The widget will be embedded here */}
               </div>
               {children}

@@ -35,9 +35,16 @@
 },
 
 :root{
-    .disable-click {
-        pointer-events: none;
-      }
+  .disable-click {
+    position: relative;
+    pointer-events: none;
+}
+.scroll-container {
+  overflow-y: auto; /* Enable vertical scrolling */
+  height: 100%; /* Adjust as needed to fit your layout */
+}
+  
+ 
       #sec {
         overflow-y: hidden; /* Hide vertical scrollbar */
         overflow-x: hidden;

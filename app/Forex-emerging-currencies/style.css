@@ -1,0 +1,4 @@
+.disable-click {
+    position: relative;
+    pointer-events: none;
+}
