@@ -1,6 +1,6 @@
 export default function Features() {
   return (
-    <section className="bg-gradient-to-t from-costumegray to-costumperpel">
+    <section className="bg-gradient-to-t from-costumegray to-costumperpel overflow-auto">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 ">
         <div className="py-12 md:py-20">
 
@@ -17,42 +17,42 @@ export default function Features() {
             <div className="relative flex flex-col items-center" data-aos="fade-up" data-aos-anchor="[data-aos-id-blocks]">
              
               <h4 className="h4 text-xl text-white mb-2">Agriculture and CPG</h4>
-              <p className="text-lg text-gray-400 text-center">Improve decision-making and deliver profit long after the crop is harvested.</p>
+              <p className="sm:text-lg text-base text-gray-400 text-center">Improve decision-making and deliver profit long after the crop is harvested.</p>
             </div>
 
             {/* 2nd item */}
             <div className="relative flex flex-col items-center" data-aos="fade-up" data-aos-delay="100" data-aos-anchor="[data-aos-id-blocks]">
           
               <h4 className="h4 text-xl text-white mb-2">Coal mining and production</h4>
-              <p className="text-lg text-gray-400 text-center">Manage coal quality and inventory from pit to delivery.</p>
+              <p className="sm:text-lg text-base text-gray-400 text-center">Manage coal quality and inventory from pit to delivery.</p>
             </div>
 
             {/* 3rd item */}
             <div className="relative flex flex-col items-center" data-aos="fade-up" data-aos-delay="200" data-aos-anchor="[data-aos-id-blocks]">
             
               <h4 className="h4 text-xl text-white mb-2">Crude oil, refined products</h4>
-              <p className="text-lg text-gray-400 text-center">Minimize the impacts of market disruptions and risk on your business.</p>
+              <p className="sm:text-lg text-base text-gray-400 text-center">Minimize the impacts of market disruptions and risk on your business.</p>
             </div>
 
             {/* 4th item */}
             <div className="relative flex flex-col items-center" data-aos="fade-up" data-aos-delay="300" data-aos-anchor="[data-aos-id-blocks]">
              
               <h4 className="h4 text-xl text-white mb-2">Environmental credits</h4>
-              <p className="text-lg text-gray-400 text-center">Manage renewable credits and certificates from generation to retirement.</p>
+              <p className="sm:text-lg text-base text-gray-400 text-center">Manage renewable credits and certificates from generation to retirement.</p>
             </div>
 
             {/* 5th item */}
             <div className="relative flex flex-col items-center" data-aos="fade-up" data-aos-delay="400" data-aos-anchor="[data-aos-id-blocks]">
         
               <h4 className="h4 text-xl text-white mb-2">Manufacturing and procurement</h4>
-              <p className="text-lg text-gray-400 text-center">Get real-time, actionable insights into your raw material spend.</p>
+              <p className="sm:text-lg text-base text-gray-400 text-center">Get real-time, actionable insights into your raw material spend.</p>
             </div>
 
             {/* 6th item */}
             <div className="relative flex flex-col items-center" data-aos="fade-up" data-aos-delay="500" data-aos-anchor="[data-aos-id-blocks]">
            
               <h4 className="h4 text-xl text-white mb-2">Merchant trading</h4>
-              <p className="text-lg text-gray-400 text-center">Gain business insights to optimize trading strategies.</p>
+              <p className="sm:text-lg text-base text-gray-400 text-center">Gain business insights to optimize trading strategies.</p>
             </div>
 
           </div>

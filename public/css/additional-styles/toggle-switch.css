@@ -5,7 +5,7 @@
 }
 
 .form-switch label {
-    @apply block overflow-hidden cursor-pointer h-8 rounded-full;
+    @apply block overflow-auto cursor-pointer h-8 rounded-full;
 }
 
 .form-switch label>span:first-child {

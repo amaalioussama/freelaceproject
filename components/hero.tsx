@@ -21,11 +21,11 @@ export default function Herocomponent() {
     ];
     
 
-  return <div className="flex justify-center items-center    bg-bgbg bg-cover"  style={{height : "568px"}}>
+  return <div className="flex justify-center items-center    bg-bgbg bg-cover overflow-auto "  style={{height : "568px"}}>
 
-<div id="cc" className="flex flex-grow  justify-center items-center">
+<div id="cc" className="flex flex-grow  justify-center items-center ml-16">
 <div className="-mt-12 ">
-<div className="ml-44">
+<div className="ml-[6rem]  sm:ml-36">
       
  
 {wordsligne1.map((word, index) => (
@@ -34,7 +34,7 @@ export default function Herocomponent() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.25, delay: index * 0.08 }}
-                className="text-white text-6xl font-outfitregular uppercase"
+                className="text-white text-3xl text-center sm:text-6xl sm:text-center font-outfitregular uppercase"
             >
                 {word}
             </motion.span>
@@ -43,7 +43,7 @@ export default function Herocomponent() {
     </div>
   
     <div className="mt-10">
-    <div>
+    <div >
     {wordsligne5.map((character, index) => (
             character === "\n" ? (
               <br key={index} />
@@ -53,7 +53,7 @@ export default function Herocomponent() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.02, delay: (index * 0.008) + 0.01 }}
-                className="text-xl font-mono text-white"
+                className=" text-transparent sm:text-xl font-mono sm:text-white"
               >
                 {character}
               </motion.span>
@@ -68,7 +68,7 @@ export default function Herocomponent() {
   animate={{ y: 20 ,opacity : 1 }}
   transition={{ duration:3, delay: 0.1 }}
  
- className=" relative ml-52 mt-9 border-2  border-white h-16 w-96">
+ className=" relative sm:ml-[10.5rem] sm:mt-9 border-2 ml-28 -mt-28   h-14 w-48   border-white sm:h-16 sm:w-96">
  <motion.button
         whileHover={{
           scale: 1.1,
@@ -76,7 +76,7 @@ export default function Herocomponent() {
           backgroundColor: "#281e53"
         }}
         transition={{ duration: 0.5}}
-      className=" flex justify-center items-center text-center       bg-mediumBlue  h-16 w-96 ">
+      className=" flex justify-center items-center text-center    h-14 w-48  bg-mediumBlue  sm:h-16 sm:w-96 ">
    
     <h2 className="text-white font-outfitregular text-2xl uppercase">
       

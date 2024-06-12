@@ -11,7 +11,8 @@ import dubai from '../public/images/dubai.jpg'
 import React, { useState } from 'react';
 
 export default function Zigzag() {
-  const [hoveredIndex, setHoveredIndex] = useState(-1);
+  const [hoveredIndex1, setHoveredIndex1] = useState(-1);
+  const [hoveredIndex2, setHoveredIndex2] = useState(-1);
 
   const definitions = [
     {
@@ -27,45 +28,46 @@ export default function Zigzag() {
       description: ' Costs risks are a result of an increase in the costs of commodities.',
     },
   ];
+
   const definitions1 = [
     {
       title: 'Regulatory risk',
       description: ' When laws and regulations have the potential to impact on the prices or availability of commodities, then there is a regulatory risk.',
-    }
+    },
   ];
   return (
-    <section className='bg-gradient-to-t from-costumperpel to-costumegray '>
+    <section className='bg-gradient-to-t from-costumperpel to-costumegray overflow-auto  '>
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="py-12 md:py-20 border-t border-gray-800">
 
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <div className="inline-flex text-2xl font-mono py-1 px-3 m-2 text-white uppercase  mb-2">Digital transformation for the commodities industry</div>
+            <div className="inline-flex text-4xl text-2xl text-stone-200 font-mono py-1 px-3 m-2  uppercase  mb-2">Digital transformation for the commodities industry</div>
 
             <p className='inline-flex text-lg font-mono py-1 px-3  text-white uppercase '>
               Navigate market volatility and operational complexity with our tools/solutions, designed to support your organization’s needs.
              We offer a suite of comprehensive commodities trading, risk management, 
             and advanced decision support solutions to empower businesses of all sizes across all industries, commodities,
              and regions. CommoHedge is a long-term partner on your digital transformation journey.</p>
-              <p className="text-4xl text-gray-200 mt-3  uppercase">Best Solution in Africa & MENA Region </p>
+              <p className="sm:text-4xl text-2xl text-stone-200 mt-3  uppercase">Best Solution in Africa & MENA Region </p>
           </div>
-          <div className='flex justify-around items-center'>
+          <div className='sm:flex sm:justify-around sm:items-center'>
             <div>
             <p className=' text-white text-3xl font-mono uppercase text-center mb-3 '>Europe</p>
-              <p className=' text-white text-2xl font-mono uppercase text-center mb-3 '>France</p>
-              <Image src={paris} alt='ha' className=' h-[300px] w-[320px] rounded-xl'/>
+              <p className=' text-white text-2xl font-mono uppercase text-center mb-3 '>France ( Paris )</p>
+              <Image src={paris} alt='ha' className=' sm:h-[300px] sm:w-[320px] rounded-xl'/>
               <p className='   font-mono uppercase ml-2 mt-3 text-gray-400 text-center '>la place financière de Paris</p>
             </div>
             <div>
-            <p className=' text-white text-3xl font-mono uppercase  text-center  mb-3 '>North Africa </p>
-              <p className=' text-white text-2xl font-mono uppercase  text-center  mb-3 '>Maroc</p>
-              <Image src={casa} alt='ha' className=' h-[300px] w-[320px]  rounded-xl'/>
+            <p className=' text-white text-3xl font-mono uppercase  text-center  mb-3 sm:mt-0 mt-7 '>North Africa </p>
+              <p className=' text-white text-2xl font-mono uppercase  text-center  mb-3 '>Morocco ( Casablanca)</p>
+              <Image src={casa} alt='ha' className=' sm:h-[300px] sm:w-[320px] h-[400px]  rounded-xl'/>
               <p className=' text-gray-400 font-mono uppercase text-center  mt-3 '>Casablanca Finance City  </p>
             </div>
             <div className='mt-7'>
             <p className=' text-white text-3xl font-mono uppercase text-center mb-3 '>Middle East </p>
-              <p className=' text-white text-2xl font-mono uppercase text-center mb-3 '>dubai </p>
-              <Image src={dubai} alt='ha' className=' h-[300px] w-[320px]  rounded-xl'/>
+              <p className=' text-white text-2xl font-mono uppercase text-center mb-3 '>UAE ( Dubai ) </p>
+              <Image src={dubai} alt='ha' className=' sm:h-[300px] sm:w-[320px]   rounded-xl'/>
               <p className=' text-gray-400 font-mono uppercase text-center mt-3 '>Dubai International Financial </p>
               <p className=' text-gray-400 font-mono uppercase text-center  mt-3 '>Center </p>
             </div>
@@ -230,63 +232,61 @@ export default function Zigzag() {
        
           </div>
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <div className="inline-flex text-4xl font-mono py-1 px-3 m-2 text-white uppercase  mb-2">What are the types of Risk?</div>
+            <div className="inline-flex text-4xl  font-mono py-1 px-3 m-2 text-white uppercase  mb-2">What are the types of Risk?</div>
 
             <p className='inline-flex text-lg font-mono py-1 px-3  text-white uppercase '>
             Commodity traders are likely to be exposed to any of, or a combination of the following commodity risks</p>
        
           </div>
- 
-    <div className="flex ml-[365px]">
-      {definitions1.map((definition, index) => (
-        <div
-          key={index}
-          className={`border-4 border-l-2 border-r-2 border-b-0 text-white font-mono text-xl text-center h-28 w-[370px] ${
-            index === 0 ? 'border-l-' : ''
-          } ${index === definitions1.length - 1 ? 'border-r-1' : ''} ${
-            index === hoveredIndex ? 'bg-mediumBlue' : ''
-          }`}
-          onMouseEnter={() => setHoveredIndex(index)}
-          onMouseLeave={() => setHoveredIndex(-1)}
-        >
-          {index !== hoveredIndex ? (
-            <h1 className="text-center mt-9 uppercase duration-600">
-              {definition.title}
-            </h1>
-          ) : (
-            <div className="p-4 text-white font-mono text-sm text-center">
-              {definition.description}
-            </div>
-          )}
-        </div>
-      ))}
-    </div>
+          <div className="flex  justify-center items-center">
+        {definitions1.map((definition, index) => (
+          <div
+            key={index}
+            className={`border-4 border-l-2 border-r-2 border-b-0 text-white font-mono text-xl text-center h-28 sm:w-[370px] w-[400px]  ${
+              index === 0 ? 'border-l-' : ''
+            } ${index === definitions1.length - 1 ? 'border-r-1' : ''} ${
+              index === hoveredIndex1 ? 'bg-mediumBlue' : ''
+            }`}
+            onMouseEnter={() => setHoveredIndex1(index)}
+            onMouseLeave={() => setHoveredIndex1(-1)}
+          >
+            {index !== hoveredIndex1 ? (
+              <h1 className="text-center mt-9 uppercase duration-600">
+                {definition.title}
+              </h1>
+            ) : (
+              <div className="p-4 text-white font-mono text-sm text-center">
+                {definition.description}
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
 
-
-
-    <div className="flex">
-      {definitions.map((definition, index) => (
-        <div
-          key={index}
-          className={`border-4 border-l-2 border-r-2 text-white font-mono text-xl text-center h-28 w-[390px] ${
-            index === 0 ? 'border-l- ' : ''
-          } ${index === definitions.length - 1 ? 'border-r-1' : ''} ${
-            index === hoveredIndex ? 'bg-mediumBlue' : ''
-          }`}
-          onMouseEnter={() => setHoveredIndex(index)}
-          onMouseLeave={() => setHoveredIndex(-1)}
-        >
-          {index !== hoveredIndex ? (
-            <h1 className="text-center mt-9 uppercase duration-600">
-              {definition.title}
-            </h1>
-          ) : (
-            <div className="p-4 text-white font-mono text-sm text-center">{definition.description}</div>
-          )}
-        </div>
-      ))}
-    </div>
-   
+      <div className="flex">
+        {definitions.map((definition, index) => (
+          <div
+            key={index}
+            className={`border-4 border-l-2 border-r-2 text-white font-mono text-xl text-center h-28 w-[390px] ${
+              index === 0 ? 'border-l- ' : ''
+            } ${index === definitions.length - 1 ? 'border-r-1' : ''} ${
+              index === hoveredIndex2 ? 'bg-mediumBlue' : ''
+            }`}
+            onMouseEnter={() => setHoveredIndex2(index)}
+            onMouseLeave={() => setHoveredIndex2(-1)}
+          >
+            {index !== hoveredIndex2 ? (
+              <h1 className="text-center mt-9 uppercase duration-600">
+                {definition.title}
+              </h1>
+            ) : (
+              <div className="p-4 text-white font-mono text-sm text-center">
+                {definition.description}
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
 
 </div>
 </div>
