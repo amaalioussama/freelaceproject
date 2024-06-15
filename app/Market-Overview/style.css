@@ -1,4 +1,8 @@
 .disable-click {
-    position: relative;
     pointer-events: none;
-}
+  }
+  
+  .clickable-title {
+    cursor: pointer;
+  }
+  

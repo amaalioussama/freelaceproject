@@ -7,8 +7,8 @@ import User from '../user';
 import { NavItem } from '../nav-item';
 import { Analytics } from '@vercel/analytics/react';
 import style from './style.css'
-const Layout = ({ children, searchParams }) => {
 
+const Layout = ({ children, searchParams }) => {
   const search = searchParams?.q ?? '';
   const offset = searchParams?.offset ?? 0;
   const [showDropdown, setShowDropdown] = useState(true);
@@ -26,7 +26,7 @@ const Layout = ({ children, searchParams }) => {
       "dateRange": "12M",
       "showChart": true,
       "locale": "en",
-      "largeChartUrl": "",
+      "largeChartUrl": "https://freelaceproject.vercel.app/Market-Overview", // Set your URL here
       "isTransparent": false,
       "showSymbolLogo": true,
       "showFloatingTooltip": false,
@@ -83,44 +83,30 @@ const Layout = ({ children, searchParams }) => {
               </div>
               <div className="flex-1 overflow-auto py-2">
                 <nav className="grid items-start px-4 text-sm font-medium text-white">
-                  <NavItem href="/user">
-                    User Settings
-                  </NavItem>
-                  <NavItem href="/Market-Overview">
-                    Market Overview
-                  </NavItem>
-                  <NavItem href="/Economic-Calendar">
-                    Economic Calendar
-                  </NavItem>
-                  <NavItem href="/Market-News">
-                    Market News
-                  </NavItem>
-                  <NavItem href="/charts">
-                    Sharts
-                  </NavItem>
-                  <button
-          id="dropdownDefaultButton"
-          onClick={toggleDropdown}
-          className="text-white bg-transparent text-sm px-3 py-2.5 text-center inline-flex items-center"
-          type="button"
-        >
-          Market Data
-          <svg className="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4"/>
-          </svg>
-        </button>
-        {showDropdown && (
-          <div id="dropdown" className="z-10 bg-transparent rounded-lg">
-            <ul className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
-              <li>
-                <Link href="/Forex" className="text-slate-300 block px-4 py-2 hover:text-white">Forex</Link>
-              </li>
-              <li>
-                <Link href="/Forex-emerging-currencies" className="text-slate-300 block px-4 py-2 hover:text-white">Forex (emerging currencies)</Link>
-              </li>
-            </ul>
-          </div>
-        )}
+                  <NavItem href="/user">User Settings</NavItem>
+                  <NavItem href="/Commodites-Market">Commodites Market</NavItem>
+                  <NavItem href="/Market-Overview">Market Overview</NavItem>
+                  <NavItem href="/Economic-Calendar">Economic Calendar</NavItem>
+                  <NavItem href="/Market-News">Market News</NavItem>
+                  <NavItem href="/charts">Charts</NavItem>
+                  <button id="dropdownDefaultButton" onClick={toggleDropdown} className="text-white bg-transparent text-sm px-3 py-2.5 text-center inline-flex items-center" type="button">
+                    Market Data
+                    <svg className="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                      <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4" />
+                    </svg>
+                  </button>
+                  {showDropdown && (
+                    <div id="dropdown" className="z-10 bg-transparent rounded-lg">
+                      <ul className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+                        <li>
+                          <Link href="/Forex" className="text-slate-300 block px-4 py-2 hover:text-white">Forex</Link>
+                        </li>
+                        <li>
+                          <Link href="/Forex-emerging-currencies" className="text-slate-300 block px-4 py-2 hover:text-white">Forex (emerging currencies)</Link>
+                        </li>
+                      </ul>
+                    </div>
+                  )}
                 </nav>
               </div>
             </div>
@@ -134,10 +120,7 @@ const Layout = ({ children, searchParams }) => {
               <User />
             </header>
             <main className="">
-              <div id="tradingview-widget" className="disable-click">
-      
-               
-              </div>
+              <div id="tradingview-widget" ></div>
               {children}
             </main>
           </div>

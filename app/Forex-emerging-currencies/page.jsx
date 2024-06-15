@@ -64,7 +64,10 @@ const Layout = ({ children }) => {
                   <NavItem href="/user">
                     User Settings
                   </NavItem>
-                  <NavItem href="/Market-Overview">
+                   <NavItem href="/Commodites-Market">
+              Commodites Market
+                  </NavItem>
+<NavItem href="/Market-Overview">
                     Market Overview
                   </NavItem>
                   <NavItem href="/Economic-Calendar">

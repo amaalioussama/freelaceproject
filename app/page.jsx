@@ -51,10 +51,13 @@ export default function IndexPage({ searchParams }) {
                   <NavItem href="/user">
                     User Settings
                   </NavItem>
-                  <NavItem href="/Market-Overview">
+                   <NavItem href="/Commodites-Market">
+              Commodites Market
+                  </NavItem>
+<NavItem href="/Market-Overview">
                     Market Overview
                   </NavItem>
-                  <NavItem href="/Market-Overview">
+                  <NavItem href="/sharts">
                     Charts
                   </NavItem>
                   <NavItem href="/Economic-Calendar">

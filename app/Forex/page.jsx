@@ -57,7 +57,10 @@ const Layout = ({children}) => {
               <div className="flex-1 overflow-auto py-2">
                 <nav className="grid items-start px-4 text-sm font-medium text-white">
                   <NavItem href="/user">User Settings</NavItem>
-                  <NavItem href="/Market-Overview">Market Overview</NavItem>
+                   <NavItem href="/Commodites-Market">
+              Commodites Market
+                  </NavItem>
+<NavItem href="/Market-Overview">Market Overview</NavItem>
                   <NavItem href="/Economic-Calendar">Economic Calendar</NavItem>
                   <NavItem href="/Market-News">Market News</NavItem>
                   <NavItem href="/charts">Charts</NavItem>
