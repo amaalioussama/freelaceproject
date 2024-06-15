@@ -23,6 +23,7 @@ const Layout = ({ children = undefined }) => {
       script.innerHTML = JSON.stringify({
         
         "height": "1048",
+        "largeChartUrl": "https://freelaceproject.vercel.app/Commodites-Market", 
         "symbolsGroups": [
           {
             "name": "Metals",
