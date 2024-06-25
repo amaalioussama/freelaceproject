@@ -22,7 +22,7 @@ const Layout =  ({ children = undefined }) => {
       script.async = true;
       script.innerHTML = JSON.stringify({
         "autosize": true,
-        "symbol": "NASDAQ:AAPL",
+        "symbol": "OIL",
         "interval": "D",
         "timezone": "Etc/UTC",
         "theme": "dark",
@@ -110,7 +110,7 @@ const Layout =  ({ children = undefined }) => {
               <User />
             </header>
             <main className="flex-1 h-full">
-              <div id="tradingview-widget" className="h-full w-full disable-click">
+              <div id="tradingview-widget" className="h-full w-full ">
                 {/* The widget will be embedded here */}
               </div>
               {children}

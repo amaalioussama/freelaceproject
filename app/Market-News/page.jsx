@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
       "isTransparent": false,
       "displayMode": "regular",
       "colorTheme": "dark",
-      "height": "1048",
+      "height": "590",
       "locale": "en"
     });
     const widgetContainer = document.getElementById('tradingview-widget');
@@ -114,7 +114,7 @@ const Layout = ({ children }) => {
               <User />
             </header>
             <main className="" style={{ backgroundColor: "#1A1E26" }}>
-  <div id="tradingview-widget" className="disable-click">
+  <div id="tradingview-widget" className="">
     {/* TradingView widget will be injected here */}
   </div>
   {children}

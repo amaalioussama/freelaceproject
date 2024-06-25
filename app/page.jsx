@@ -57,7 +57,7 @@ export default function IndexPage({ searchParams }) {
 <NavItem href="/Market-Overview">
                     Market Overview
                   </NavItem>
-                  <NavItem href="/sharts">
+                  <NavItem href="/charts">
                     Charts
                   </NavItem>
                   <NavItem href="/Economic-Calendar">
