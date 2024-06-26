@@ -39,26 +39,11 @@
     position: relative;
     pointer-events: none;
 }
-.scroll-container {
-  overflow-y: auto; /* Enable vertical scrolling */
-  height: 100%; /* Adjust as needed to fit your layout */
-}
+
   
  
-      #sec {
-        overflow-y: hidden; /* Hide vertical scrollbar */
-        overflow-x: hidden;
-      }
-      html, body {
-        overflow: hidden; /* Hide overflow for the entire page */
-        height: 100%; /* Ensure the height is 100% */
-        margin: 0; /* Remove default margin */
-        padding: 0; /* Remove default padding */
-      }
-      
-      * {
-        box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
-      }
+     
+     
       
 
       
