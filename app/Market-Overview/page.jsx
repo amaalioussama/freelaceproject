@@ -88,7 +88,36 @@ const Layout = ({ children, searchParams }) => {
                   <NavItem href="/Market-Overview">Market Overview</NavItem>
                   <NavItem href="/Economic-Calendar">Economic Calendar</NavItem>
                   <NavItem href="/Market-News">Market News</NavItem>
-                  <NavItem href="/charts">Charts</NavItem>
+                  <NavItem href="/charts">  Charts
+                  </NavItem>  
+                  <NavItem href="/Vietnam">
+                    Vietnam Stock Exchange
+
+                  </NavItem>
+<NavItem href="/Cryptocurrencies">Cryptocurrencies Screener
+
+                  </NavItem>
+<NavItem href="/">
+     Turkey Stock Exchange
+
+                  </NavItem>
+<NavItem href="/">
+        UAE Stock Exchange
+
+                  </NavItem>
+<NavItem href="/">
+        Switzerland Stock Exchange
+
+                  </NavItem>
+<NavItem href="/">
+        Qatar Stock Exchange
+                  </NavItem>
+<NavItem href="/">
+  South Africa Stock Exchange
+                  </NavItem>
+<NavItem href="/">
+  South Africa Stock Exchange
+                  </NavItem>
                   <button id="dropdownDefaultButton" onClick={toggleDropdown} className="text-white bg-transparent text-sm px-3 py-2.5 text-center inline-flex items-center" type="button">
                     Market Data
                     <svg className="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">

@@ -63,7 +63,36 @@ const Layout = ({children}) => {
 <NavItem href="/Market-Overview">Market Overview</NavItem>
                   <NavItem href="/Economic-Calendar">Economic Calendar</NavItem>
                   <NavItem href="/Market-News">Market News</NavItem>
-                  <NavItem href="/charts">Charts</NavItem>
+                  <NavItem href="/charts">  Charts
+                  </NavItem>  
+                  <NavItem href="/Vietnam">
+                    Vietnam Stock Exchange
+
+                  </NavItem>
+<NavItem href="/Cryptocurrencies">Cryptocurrencies Screener
+
+                  </NavItem>
+<NavItem href="/">
+     Turkey Stock Exchange
+
+                  </NavItem>
+<NavItem href="/">
+        UAE Stock Exchange
+
+                  </NavItem>
+<NavItem href="/">
+        Switzerland Stock Exchange
+
+                  </NavItem>
+<NavItem href="/">
+        Qatar Stock Exchange
+                  </NavItem>
+<NavItem href="/">
+  South Africa Stock Exchange
+                  </NavItem>
+<NavItem href="/">
+  South Africa Stock Exchange
+                  </NavItem>
                   <button
           id="dropdownDefaultButton"
           onClick={toggleDropdown}

@@ -2,12 +2,15 @@
 
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { Logo } from '@/components/icons';
+import { Logo, SettingsIcon, UsersIcon, VercelLogo } from '@/components/icons';
 import User from '../user';
 import { NavItem } from '../nav-item';
 import { Analytics } from '@vercel/analytics/react';
 
-const Layout =  ({ children = undefined }) => {
+
+const Layout = ({ children, searchParams }) => {
+  const search = searchParams?.q ?? '';
+  const offset = searchParams?.offset ?? 0;
   const [showDropdown, setShowDropdown] = useState(true);
 
   const toggleDropdown = () => {
@@ -15,37 +18,37 @@ const Layout =  ({ children = undefined }) => {
   };
 
   useEffect(() => {
+    const script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-screener.js';
+    script.async = true;
+    script.innerHTML = JSON.stringify({
+      
+      "height": "1048",
+      "defaultColumn": "overview",
+      "defaultScreen": "most_capitalized",
+      "market": "vietnam",
+      "showToolbar": true,
+      "colorTheme": "dark",
+      "locale": "en"
+    });
+
     const widgetContainer = document.getElementById('tradingview-widget');
     if (widgetContainer) {
-      const script = document.createElement('script');
-      script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js';
-      script.async = true;
-      script.innerHTML = JSON.stringify({
-        "autosize": true,
-        "symbol": "OIL",
-        "interval": "D",
-        "timezone": "Etc/UTC",
-        "theme": "dark",
-        "style": "1",
-        "locale": "en",
-        "allow_symbol_change": true,
-        "container_id": "tradingview-widget"
-      });
-
       widgetContainer.appendChild(script);
-
-      return () => {
-        if (widgetContainer.contains(script)) {
-          widgetContainer.removeChild(script);
-        }
-      };
     }
+
+    return () => {
+      if (widgetContainer && widgetContainer.contains(script)) {
+        widgetContainer.removeChild(script);
+      }
+    };
   }, []);
 
   return (
     <html lang="en" className="h-full" style={{ backgroundColor: "#1A1E26" }}>
-      <body className="h-full" style={{ backgroundColor: "#1A1E26" }}>
-        <div className="grid min-h-screen h-full w-full lg:grid-cols-[280px_1fr]">
+      <body style={{ backgroundColor: "#1A1E26" }}>
+        <div className="grid min-h-screen w-full lg:grid-cols-[280px_1fr]">
           <div className="hidden border-r lg:block" style={{ backgroundColor: "#1A1E26", borderColor: "#FFFF" }}>
             <div className="flex h-full max-h-screen flex-col gap-2">
               <div className="flex h-[60px] items-center border-b px-5" style={{ borderColor: "#FFFF" }}>
@@ -56,25 +59,14 @@ const Layout =  ({ children = undefined }) => {
               </div>
               <div className="flex-1 overflow-auto py-2">
                 <nav className="grid items-start px-4 text-sm font-medium text-white">
-                  <NavItem href="/user">
-                    User Settings
-                  </NavItem>
-                   <NavItem href="/Commodites-Market">
-              Commodites Market
-                  </NavItem>
-<NavItem href="/Market-Overview">
-                    Market Overview
-                  </NavItem>
-                  <NavItem href="/Economic-Calendar">
-                    Economic Calendar
-                  </NavItem>
-                  <NavItem href="/Market-News">
-                    Market News
-                  </NavItem>
-                  <NavItem href="/charts">
-                      Charts
+                  <NavItem href="/user">User Settings</NavItem>
+                  <NavItem href="/Commodites-Market">Commodites Market</NavItem>
+                  <NavItem href="/Market-Overview">Market Overview</NavItem>
+                  <NavItem href="/Economic-Calendar">Economic Calendar</NavItem>
+                  <NavItem href="/Market-News">Market News</NavItem>
+                  <NavItem href="/charts">  Charts
                   </NavItem>  
-<NavItem href="/Vietnam">
+                  <NavItem href="/Vietnam">
                     Vietnam Stock Exchange
 
                   </NavItem>
@@ -101,17 +93,11 @@ const Layout =  ({ children = undefined }) => {
                   </NavItem>
 <NavItem href="/">
   South Africa Stock Exchange
-                  
                   </NavItem>
-                  <button
-                    id="dropdownDefaultButton"
-                    onClick={toggleDropdown}
-                    className="text-white bg-transparent text-sm px-3 py-2.5 text-center inline-flex items-center"
-                    type="button"
-                  >
+                  <button id="dropdownDefaultButton" onClick={toggleDropdown} className="text-white bg-transparent text-sm px-3 py-2.5 text-center inline-flex items-center" type="button">
                     Market Data
                     <svg className="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                      <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4"/>
+                      <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4" />
                     </svg>
                   </button>
                   {showDropdown && (
@@ -130,7 +116,7 @@ const Layout =  ({ children = undefined }) => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col h-full">
+          <div className="flex flex-col">
             <header className="flex h-14 lg:h-[60px] items-center gap-4 border-b px-6 justify-between lg:justify-end" style={{ borderColor: "white", borderBottomWidth: "0.5px" }}>
               <Link className="flex items-center gap-2 font-semibold text-white lg:hidden" href="/">
                 <Logo />
@@ -138,10 +124,8 @@ const Layout =  ({ children = undefined }) => {
               </Link>
               <User />
             </header>
-            <main className="flex-1 h-full">
-              <div id="tradingview-widget" className="h-full w-full ">
-                {/* The widget will be embedded here */}
-              </div>
+            <main className="">
+              <div id="tradingview-widget" ></div>
               {children}
             </main>
           </div>
