@@ -21,7 +21,7 @@ export default function Herocomponent() {
     ];
     
 
-  return <div className="flex justify-center items-center    bg-bgbg bg-cover overflow-auto "  style={{height : "568px"}}>
+  return <div className="flex justify-center items-center    bg-bgbg bg-cover  "  style={{height : "568px"}}>
 
 <div id="cc" className="flex flex-grow  justify-center items-center ml-16">
 <div className="-mt-12 ">
