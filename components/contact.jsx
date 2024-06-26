@@ -25,7 +25,7 @@ const Contact = () => {
       );
   };
   return (
-    <div className="bg-gradient-to-t from-costumperpel  to-costumegray sm:h-[23rem] h-[30rem] ">
+    <div className="bg-gradient-to-t from-costumperpel  to-costumegray sm:h-[35rem]  sm:mt-0 ">
      <div className="flex justify-center items-center w-full h-screen">
   <div className="flex flex-col justify-center items-center w-[1000px] h-[200px]">
     <div className="inline-flex sm:text-2xl text-xl font-mono py-1 px-3 m-2 text-white uppercase mb-12 text-center">
@@ -33,7 +33,7 @@ const Contact = () => {
     </div>
     <form ref={form} onSubmit={sendEmail} className="sm:grid sm:grid-cols-2 sm:gap-4 flex-wrap justify-center items-center">
       <div className="bg-mediumpink w-96 h-12 -translate-x-[3px] -translate-y-[3px]">
-        <div className="bg-mediumBlue w-96 h-12 -translate-x-[3px] -translate-y-[3px]">
+        <div className="bg-mediumBlue w-96 h-12 -translate-x-[3px] -translate-y-[3px] ">
           <input
             className="bg-[#ffffff] w-full h-full sm:pl-4"
             type="text"
@@ -42,7 +42,7 @@ const Contact = () => {
           />
         </div>
       </div>
-      <div className="bg-mediumpink w-96 h-12 -translate-x-[3px] -translate-y-[3px]">
+      <div className="bg-mediumpink w-96 h-12 -translate-x-[3px] -translate-y-[3px] sm:mt-0 mt-4">
         <div className="bg-mediumBlue w-96 h-12 -translate-x-[3px] -translate-y-[3px]">
           <input
             className="bg-[#ffffff] w-full h-full sm:pl-4"
@@ -52,7 +52,7 @@ const Contact = () => {
           />
         </div>
       </div>
-      <div className="bg-mediumpink w-96 h-12 -translate-x-[3px] -translate-y-[3px]">
+      <div className="bg-mediumpink w-96 h-12 -translate-x-[3px] -translate-y-[3px] sm:mt-0 mt-4">
         <div className="bg-mediumBlue w-96 h-12 -translate-x-[3px] -translate-y-[3px]">
           <input
             className="bg-[#ffffff] w-full h-full sm:pl-4"
@@ -62,10 +62,10 @@ const Contact = () => {
           />
         </div>
       </div>
-      <div className="bg-mediumpink w-96 h-12 -translate-x-[3px] -translate-y-[3px]">
+      <div className="bg-mediumpink w-96 h-12 -translate-x-[3px] -translate-y-[3px] sm:mt-0 mt-4 ">
         <div className="bg-mediumBlue w-96 h-12 -translate-x-[3px] -translate-y-[3px]">
           <input
-            className="bg-[#ffffff] w-full h-full sm:pl-4"
+            className="bg-[#ffffff] w-full h-full sm:pl-4 "
             type="text"
             placeholder="LOCATION"
             name="location"
@@ -76,7 +76,7 @@ const Contact = () => {
         initial={{ y: -35, opacity: 0 }}
         animate={{ y: 20, opacity: 1 }}
         transition={{ duration: 3, delay: 0.1 }}
-        className="relative col-span-2 mt-9 border-2 border-white w-44 h-10 sm:h-16 sm:w-56"
+        className="relative col-span-2 mt-9 border-2 border-white w-44 h-10 sm:h-16 sm:w-56 sm:ml-64 ml-24"
       >
         <motion.button
           whileHover={{

@@ -25,7 +25,7 @@ export default function Herocomponent() {
 
 <div id="cc" className="flex flex-grow  justify-center items-center ml-16">
 <div className="-mt-12 ">
-<div className=" ml-4  sm:ml-36">
+<div className=" ml-10  sm:ml-36">
       
  
 {wordsligne1.map((word, index) => (
@@ -68,7 +68,7 @@ export default function Herocomponent() {
   animate={{ y: 20 ,opacity : 1 }}
   transition={{ duration:3, delay: 0.1 }}
  
- className=" relative sm:ml-[10.5rem] sm:mt-9 border-2 ml-8 -mt-28   h-14 w-48   border-white sm:h-16 sm:w-96">
+ className=" relative sm:ml-[10.5rem] sm:mt-9 border-2 ml-12 -mt-28   h-14 w-48   border-white sm:h-16 sm:w-96">
  <motion.button
         whileHover={{
           scale: 1.1,
