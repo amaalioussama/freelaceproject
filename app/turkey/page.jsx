@@ -58,7 +58,7 @@ const Layout = ({ children, searchParams }) => {
                 </Link>
               </div>
               <div className="flex-1 overflow-auto py-2">
-                <nav className="grid items-start px-4 text-sm font-medium text-white">
+              <nav className="grid items-start px-4 text-sm font-medium text-white">
                   <NavItem href="/user">User Settings</NavItem>
                   <NavItem href="/Commodites-Market">Commodites Market</NavItem>
                   <NavItem href="/Market-Overview">Market Overview</NavItem>
@@ -73,11 +73,11 @@ const Layout = ({ children, searchParams }) => {
 <NavItem href="/Cryptocurrencies">Cryptocurrencies Screener
 
                   </NavItem>
-<NavItem href="/">
+<NavItem href="/turkey">
      Turkey Stock Exchange
 
                   </NavItem>
-<NavItem href="/">
+<NavItem href="/uae">
         UAE Stock Exchange
 
                   </NavItem>

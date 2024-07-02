@@ -89,11 +89,11 @@ const Layout = ({ children, searchParams }) => {
 <NavItem href="/">Cryptocurrencies Screener
 
                   </NavItem>
-<NavItem href="/">
+<NavItem href="/turkey">
      Turkey Stock Exchange
 
                   </NavItem>
-<NavItem href="/">
+<NavItem href="/uae">
         UAE Stock Exchange
 
                   </NavItem>

@@ -81,10 +81,7 @@ const Layout = ({ children, searchParams }) => {
         UAE Stock Exchange
 
                   </NavItem>
-<NavItem href="/switzerland">
-        Switzerland Stock Exchange
 
-                  </NavItem>
 <NavItem href="/qatar">
         Qatar Stock Exchange
                   </NavItem>

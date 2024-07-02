@@ -86,11 +86,11 @@ const Layout = ({ children }) => {
 <NavItem href="/Cryptocurrencies">Cryptocurrencies Screener
 
                   </NavItem>
-<NavItem href="/">
+<NavItem href="/turkey">
      Turkey Stock Exchange
 
                   </NavItem>
-<NavItem href="/">
+<NavItem href="/uae">
         UAE Stock Exchange
 
                   </NavItem>

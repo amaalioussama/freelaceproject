@@ -24,7 +24,7 @@ const Layout = ({ children, searchParams }) => {
     script.async = true;
     script.innerHTML = JSON.stringify({
       
-      "height": "1048",
+      "height": "900",
       "defaultColumn": "overview",
       "defaultScreen": "most_capitalized",
       "market": "czech",
@@ -73,11 +73,11 @@ const Layout = ({ children, searchParams }) => {
 <NavItem href="/Cryptocurrencies">Cryptocurrencies Screener
 
                   </NavItem>
-<NavItem href="/">
+<NavItem href="/turkey">
      Turkey Stock Exchange
 
                   </NavItem>
-<NavItem href="/">
+<NavItem href="/uae">
         UAE Stock Exchange
 
                   </NavItem>
