@@ -101,15 +101,35 @@ const Layout = ({ children, searchParams }) => {
         Switzerland Stock Exchange
 
                   </NavItem>
-<NavItem href="/">
+<NavItem href="/qatar">
         Qatar Stock Exchange
                   </NavItem>
-<NavItem href="/">
+<NavItem href="/south-africa">
   South Africa Stock Exchange
                   </NavItem>
-<NavItem href="/">
-  South Africa Stock Exchange
-                  </NavItem>
+                  <NavItem href="/argentina">Argentina Stock Exchange</NavItem>
+                  <NavItem href="/australia">Australia Stock Exchange</NavItem>
+                  <NavItem href="/austria">Austria Stock Exchange</NavItem>
+                  <NavItem href="/brazil">Brazil Stock Exchange</NavItem>
+                  <NavItem href="/canada">Canada Stock Exchange</NavItem>
+                  <NavItem href="/china">China Stock Exchange</NavItem>
+                  <NavItem href="/colombia">Colombia Stock Exchange</NavItem>
+                  <NavItem href="/czech">Czech Stock Exchange</NavItem>
+                  <NavItem href="/denmark">Denmark Stock Exchange</NavItem>
+                  <NavItem href="/egypt">Egypt Stock Exchange</NavItem>
+                  <NavItem href="/finland">Finland Stock Exchange</NavItem>
+                  <NavItem href="/germany">Germany Stock Exchange</NavItem>
+                  <NavItem href="/greece">Greece Stock Exchange</NavItem>
+                  <NavItem href="/india">India Stock Exchange</NavItem>
+                  <NavItem href="/indonesia">Indonesia Stock Exchange</NavItem>
+                  <NavItem href="/iseland">Iseland Stock Exchange</NavItem>
+                  <NavItem href="/isreal">Isreal Stock Exchange</NavItem>
+                  <NavItem href="/italy">Italy Stock Exchange</NavItem>
+                  <NavItem href="/kuwait">Kuwait Stock Exchange</NavItem>
+                  <NavItem href="/morocco">Morocco Stock Exchange</NavItem>
+                  <NavItem href="/poland">Poland Stock Exchange</NavItem>
+                  <NavItem href="/switzerland">Switzerland Stock Exchange</NavItem>
+                  <NavItem href="/usa">Usa Stock Exchange</NavItem>
                   <button id="dropdownDefaultButton" onClick={toggleDropdown} className="text-white bg-transparent text-sm px-3 py-2.5 text-center inline-flex items-center" type="button">
                     Market Data
                     <svg className="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
